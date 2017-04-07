@@ -44,7 +44,7 @@ function postFakeData(dataTable){
     return knex(dataTable)
       .insert(generateData())
       .then((result) => {
-        console.log('!',result)
+        console.log("New row added to database")
         res.send(result)
       })
       .catch((err) => {
@@ -70,5 +70,3 @@ function generateData() {
   console.log(fakeObject);
   return fakeObject;
 };
-
-generateData();
